@@ -20,8 +20,15 @@ int main() {
 
     printf("\nDigite os dados da Primeira Carta:\n");
 
+
     printf("Estado (letra de A a H): ");
-	@@ -31,7 +33,7 @@ int main() {
+    scanf(" %c", &estadoa);
+
+    getchar();
+    printf("Código da Carta (ex: A01): ");
+    fgets(codigodacartaa, sizeof(codigodacartaa), stdin);
+
+    printf("Nome da Cidade: ");
     fgets(nomedacidadea, sizeof(nomedacidadea), stdin);
 
     printf("População: ");
@@ -29,19 +36,27 @@ int main() {
 
     getchar();
     printf("Área (em km²): ");
-	@@ -45,23 +47,32 @@ int main() {
+    scanf("%f", &areaa);
+
+    getchar();
+    printf("PIB: ");
+    scanf("%f", &piba);
+
+    getchar();
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontosturisticosa);
+
+
 
     float densidadepopa = populacaoa/areaa;
     float pibpercapa = (piba * 1000000000) / populacaoa;
 
     getchar();
     printf("Densidade populacional: %.2f hab/km² \n", densidadepopa);
-
     printf("PIB per capita: %.2f reais\n", pibpercapa);
 
 
+    
     printf("\nDigite os dados da Segunda Carta:\n");
 
     printf("Estado (letra de A a H): ");
@@ -51,7 +66,6 @@ int main() {
     printf("Código da Carta (ex: A01): ");
     fgets(codigodacartab, sizeof(codigodacartab), stdin);
 
-
     printf("Nome da Cidade: ");
     fgets(nomedacidadeb, sizeof(nomedacidadeb), stdin);
 
@@ -60,17 +74,24 @@ int main() {
 
     getchar();
     printf("Área (em km²): ");
-	@@ -75,5 +86,27 @@ int main() {
+    scanf("%f", &areab);
+
+    getchar();
+    printf("PIB: ");
+    scanf("%f", &pibb);
+
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontosturisticosb);
+
+
 
     float densidadepopb = populacaob / areab;
     float pibpercapb = (pibb * 1000000000) / populacaob;
 
     getchar();
     printf("Densidade populacional: %.2f hab/km²\n", densidadepopb);
-
     printf("PIB per capita: %.2f reais\n ", pibpercapb);
+
 
     float superpodera = (float)populacaoa + areaa + (piba * 1000000000) + pontosturisticosa + pibpercapa + (1 / densidadepopa);
     float superpoderb = (float)populacaob + areab + (pibb * 1000000000) + pontosturisticosb + pibpercapb + (1 / densidadepopb);
